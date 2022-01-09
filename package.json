@@ -28,6 +28,9 @@
       "firebase",
       "database"
     ],
+    "publishConfig": {
+      "@gr_dev:registry": "https://npm.pkg.github.com"
+    },
     "author": "GR",
     "license": "Apache-2.0 License",
     "bugs": {
