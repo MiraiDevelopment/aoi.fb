@@ -1,6 +1,6 @@
 {
     "name": "@aoifb/aoi.fb",
-    "version": "1.5.6",
+    "version": "1.5.9",
     "description": "",
     "main": "src/index.js",
     "dependencies": {
