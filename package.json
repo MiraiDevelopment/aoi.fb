@@ -1,0 +1,38 @@
+{
+    "name": "aoi.fb",
+    "version": "1.5.6",
+    "description": "",
+    "main": "src/index.js",
+    "dependencies": {
+      "aoi.js": "^4.6.0",
+      "firebase": "^8.0.0"
+    },
+    "devDependencies": {
+      "node": "^16.6.1"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/aoifb/aoi.fb.git"
+    },
+    "engines": {
+      "node": "16x"
+    },
+    "keywords": [
+      "dbdjs",
+      "dbd.js",
+      "aoijs",
+      "aoi.js",
+      "firebase",
+      "database"
+    ],
+    "author": "GR",
+    "license": "Apache-2.0 License",
+    "bugs": {
+      "url": "https://github.com/aoifb/aoi.fb/issues"
+    },
+    "homepage": "https://github.com/aoifb/aoi.fb#readme"
+  }
+  
