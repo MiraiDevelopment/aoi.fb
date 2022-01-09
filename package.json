@@ -1,5 +1,5 @@
 {
-    "name": "aoi.fb",
+    "name": "@aoifb/aoi.fb",
     "version": "1.5.6",
     "description": "",
     "main": "src/index.js",
