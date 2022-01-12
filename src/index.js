@@ -1,7 +1,9 @@
-const deleteData = require("./methods/delete");
 const set = require("./methods/set");
 const get = require("./methods/get");
 const { initializeApp } = require("firebase/app");
+const { getAnalytics } = require("firebase/analytics");
+const all = require("./methods/all");
+const deleteData = require("./methods/delete");
 
 function create(object) {
 
@@ -12,6 +14,7 @@ function create(object) {
     return {
       set: set,
       get: get,
+      all: all,
       delete: deleteData
     };
 
