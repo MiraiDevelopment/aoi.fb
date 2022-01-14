@@ -4,26 +4,28 @@ const { initializeApp } = require("firebase/app");
 const { getAnalytics } = require("firebase/analytics");
 const all = require("./methods/all");
 const deleteData = require("./methods/delete");
+const pingLatency = require("./methods/ping");
 
-function create(object) {
+class AoiFB {
 
-  try {
-  
-    const app = initializeApp(object);
-
-    return {
-      set: set,
-      get: get,
-      all: all,
-      delete: deleteData
-    };
-
-  } catch(e) { throw new Error(e) }
-  
-  
-  
+  constructor() {
+    this.version = '1.6.6'
+    this.ping = pingLatency
+    this.create = function create(object) {
+      try {
+      
+        const app = initializeApp(object);
+        return {
+          set: set,
+          get: get,
+          all: all,
+          delete: deleteData
+        };
+      
+      } catch(e) { throw new Error(e) }
+    }
+  }
+ 
 }
 
-module.exports = {
-  create
-};
+module.exports = new AoiFB

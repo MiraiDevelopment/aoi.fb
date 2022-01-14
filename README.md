@@ -1,4 +1,4 @@
-# Aoi.JS Firebase
+# Aoi.FB
 
 A Firebase Database wrapper using firebase with aoi.db like API
 
@@ -6,12 +6,22 @@ A Firebase Database wrapper using firebase with aoi.db like API
 ## Table Of Contents
 
 - [About](#about) 
-  - [Examples](#examples)
+- [Methods](#methods)
+  - [CREATE](#create)
+  - [GET](#get)
+  - [SET](#set)
+  - [ALL](#all)
+- [Example](#example)
 
 ## About
 A Firebase Database wrapper using firebase with aoi.db like API
 
-## Examples
+## Methods
+### CREATE
+### GET
+### SET
+### ALL
+## Example
 
 ```js
 
