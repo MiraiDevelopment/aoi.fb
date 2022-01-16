@@ -4,13 +4,17 @@ const { initializeApp } = require("firebase/app");
 const { getAnalytics } = require("firebase/analytics");
 const all = require("./methods/all");
 const deleteData = require("./methods/delete");
-const pingLatency = require("./methods/ping");
 
 class AoiFB {
 
   constructor() {
-    this.version = '1.6.6'
-    this.ping = pingLatency
+    this.version = '1.8.0'
+
+    let pingTime = new Date();
+    pingTime.setSeconds(pingTime.getSeconds() - 3);
+    const pingms = pingTime.getUTCSeconds();
+    this.ping = pingms
+
     this.create = function create(object) {
       try {
       
