@@ -2,24 +2,23 @@ const set = require("./methods/set");
 const get = require("./methods/get");
 const { initializeApp } = require("firebase/app");
 const { getAnalytics } = require("firebase/analytics");
+const ping = require("./methods/ping");
 const all = require("./methods/all");
 const deleteData = require("./methods/delete");
-
+const version = "1.8.2"
 class AoiFB {
 
   constructor() {
-    this.version = '1.8.0'
-
-    let pingTime = new Date();
-    pingTime.setSeconds(pingTime.getSeconds() - 3);
-    const pingms = pingTime.getUTCSeconds();
-    this.ping = pingms
+    this.version = version
+    this.ping = ping
 
     this.create = function create(object) {
       try {
       
         const app = initializeApp(object);
         return {
+          version: version,
+          ping: ping,
           set: set,
           get: get,
           all: all,
