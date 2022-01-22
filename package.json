@@ -1,7 +1,7 @@
 {
     "name": "aoi.fb",
-    "version": "1.9.1",
-    "description": "",
+    "version": "1.9.2",
+    "description": "A Firebase database of wrapper using aoi.db as API",
     "main": "src/index.js",
     "dependencies": {
       "aoi.js": "4.6.0",
@@ -18,6 +18,9 @@
       "url": "git+https://github.com/aoifb/aoi.fb.git"
     },
     "keywords": [
+      "aoi",
+      "db",
+      "dbd",
       "aoijs",
       "aoi.js",
       "aoi.fb",
