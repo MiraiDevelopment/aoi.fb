@@ -1,6 +1,5 @@
 // Global Variables
 const { initializeApp } = require("firebase/app");
-const { getAnalytics } = require("firebase/analytics");
 const version = require("../package.json").version
 const docs = require("./methods/docs");
 class AoiFB {
@@ -23,6 +22,7 @@ class AoiFB {
       try {
       
         const app = initializeApp(object);
+        console.log('[ Aoi.fb ] - Firebase initialized!')
         return {
           version: version,
           ping: ping,

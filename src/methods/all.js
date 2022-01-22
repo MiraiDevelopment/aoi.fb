@@ -7,7 +7,7 @@ async function all(model, { filter } = {}) {
       
       let result = await db.ref(model+"/").once("value")
           result = result.val()
-          result = Object.entries(result)
+          result = Object.entries(result || {})
 
       let a = []
 
@@ -27,7 +27,7 @@ async function all(model, { filter } = {}) {
     
       let result = await db.ref(model+"/").once("value")
           result = result.val()
-          result = Object.entries(result)
+          result = Object.entries(result || {})
 
       let a = []
 
