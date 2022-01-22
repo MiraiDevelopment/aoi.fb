@@ -24,8 +24,8 @@ A Firebase database of wrapper using aoi.db as API
 
 ## About
 A Firebase database of wrapper using aoi.db as API
-[![NPM Version](https://img.shields.io/npm/v/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.js)
-[![NPM Downloads](https://img.shields.io/npm/dt/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.js)
+[![NPM Version](https://img.shields.io/npm/v/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
+[![NPM Downloads](https://img.shields.io/npm/dt/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
 ## Installation
 
 **Node.JS 12.0.0 or newer is required.**  
