@@ -1,16 +1,16 @@
 // Global Variables
 const { initializeApp } = require("firebase/app");
 const { getAnalytics } = require("firebase/analytics");
-const docs = require("./methods/docs");
 const version = require("../package.json").version
+const docs = require("./methods/docs");
 class AoiFB {
 
   constructor() {
 
     // Internal Variables
+    let ping = require("./methods/ping");
     let set = require("./methods/set");
     let get = require("./methods/get");
-    let ping = require("./methods/ping");
     let all = require("./methods/all");
     let deleteData = require("./methods/del");
     
@@ -25,8 +25,8 @@ class AoiFB {
         const app = initializeApp(object);
         return {
           version: version,
-          docs: docs,
           ping: ping,
+          docs: docs,
           set: set,
           get: get,
           all: all,

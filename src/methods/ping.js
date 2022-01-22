@@ -1,4 +1,4 @@
-async function ping() {
+function ping() {
 
     let pingTime = new Date();
     pingTime.setSeconds(pingTime.getSeconds() - 3);
