@@ -80,26 +80,26 @@ bot.readyCommand({
 ## Methods
 ### SET
 #### Description - To set a value to a referenced key
-#### Use - 
+#### Example - 
 ```js
 client.db.set('table', 'key', 'value')
 ```
 ### GET
 #### Description - To get the value of a reference
-#### Use - 
+#### Example - 
 ```js
 client.db.get('table', 'key')
 ```
 
 ### ALL
 #### Description - Returns all values of the reference
-#### Use - 
+#### Example - 
 ```js
-client.db.all('table')
+client.db.all('table').then(a => a.map(b => b.key))
 ```
 ### DEL
 #### Description - To delete all the values made in the reference, be it the whole table, or a directory further down
-#### Use - 
+#### Example - 
 ```js
 client.db.del('table') or client.db.del('table', 'key')
 ```
@@ -107,7 +107,7 @@ client.db.del('table') or client.db.del('table', 'key')
 ## Others
 ### PING
 #### Description  - Returning to Database Latency
-#### Use - 
+#### Example - 
 ```js
 client.db.ping()
 ```
