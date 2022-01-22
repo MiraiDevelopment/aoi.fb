@@ -1,6 +1,6 @@
 {
     "name": "aoi.fb",
-    "version": "1.9.2",
+    "version": "1.9.3",
     "description": "A Firebase database of wrapper using aoi.db as API",
     "main": "src/index.js",
     "dependencies": {
