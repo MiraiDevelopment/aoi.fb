@@ -1,8 +1,8 @@
 <br />
     <p>
-    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://cdn.discordapp.com/attachments/929747405916733460/934445232773275688/AoiFB_Logo_Invisible.png" alt="aoi.fb" /></a>
+    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://cdn.discordapp.com/attachments/929747405916733460/934447223117340732/AoiFB_LogoTransparent_2.0.png" alt="aoi.fb" /></a>
   </p>
-  
+
 # aoi.fb
 
 A Firebase database of wrapper using aoi.db as API
