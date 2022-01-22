@@ -21,6 +21,9 @@ A Firebase Database wrapper using firebase with aoi.db like API
 ### GET
 ### SET
 ### ALL
+
+## Others
+### PING
 ## Example
 
 ```js

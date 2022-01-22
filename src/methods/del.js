@@ -1,4 +1,4 @@
-async function set(model, key, value) {
+async function del(model, key, value) {
 
     let fb = require("firebase")
     let db = fb.database()
@@ -7,6 +7,6 @@ async function set(model, key, value) {
     
     return typeof result !== undefined;
   
-  }
+}
   
-  module.exports = set
+module.exports = del
