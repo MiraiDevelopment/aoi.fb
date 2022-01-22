@@ -5,6 +5,7 @@
     "main": "src/index.js",
     "dependencies": {
       "aoi.js": "4.6.0",
+      "axios": "^0.25.0",
       "firebase": "^8.0.0"
     },
     "devDependencies": {
