@@ -31,7 +31,7 @@ A Firebase database of wrapper using aoi.db as API
 **Node.JS 12.0.0 or newer is required.**  
 
 ```sh-session
-npm install aoi.fb
+npm install aoi.fb@2.2.0
 ```
 
 ### Setup
