@@ -6,6 +6,7 @@
   "dependencies": {
     "aoi.js": "^5.0.8",
     "axios": "^0.25.0",
+    "dbdjs.mongo": "^1.0.1",
     "firebase": "8.0.0"
   },
   "devDependencies": {
