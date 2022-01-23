@@ -18,7 +18,6 @@ A Firebase database of wrapper using aoi.db as API
   - [GET](#get)
   - [ALL](#all)
   - [DEL](#del)
-- [Others](#others)
 - [Aoi.FB](#aoi.fb)
 - [Open Source](#open-source)
 
@@ -28,10 +27,10 @@ A Firebase database of wrapper using aoi.db as API
 [![NPM Downloads](https://img.shields.io/npm/dt/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
 ## Installation
 
-**Node.JS 12.0.0 or newer is required.**  
+**Node.JS 16.6.0 or newer is required.**  
 
 ```sh-session
-npm install aoi.fb
+npm install aoi.fb@latest
 ```
 
 ### Setup
@@ -39,7 +38,7 @@ npm install aoi.fb
 ```js
 const aoifb = require("aoi.fb")
 
-const database = aoifb.create({
+const firebase = aoifb.create({
   apiKey: "",
   authDomain: "",
   databaseURL: "",
@@ -56,25 +55,27 @@ const bot = new aoijs.Bot({
   token: "TOKEN", // Discord Bot Token
   prefix: "PREFIX",// Discord Bot Prefix
   intents: ["GUILDS", "GUILD_MESSAGES"], //Discord Bot Intents
-  database: database // Change database to aoi.fb
+  database: {
+    type: "custom",
+    db: firebase,
+    promisify: false
+  } // Change database to aoi.fb
 })
 
-// Event
+// Events
 bot.onMessage()
 
-// Command Example for Database Latency
+// Command Example
 bot.command({
   name: "ping",
-  code: `Pong!
-> Bot Latency: $pingms
-> Database Latency: $djsEval[client.db.ping();yes]`
+  code: `Pong! $pingms`
 })
 
+//Ready Event
 bot.readyCommand({
   channel: "",
   code: `$log[Ready on $userTag[$clientID]]`
 })
-
 ```
 
 ## Methods
@@ -82,34 +83,26 @@ bot.readyCommand({
 #### Description - To set a value to a referenced key
 #### Example - 
 ```js
-client.db.set('table', 'key', 'value')
+client.db.db.set('table', 'key', 'value')
 ```
 ### GET
 #### Description - To get the value of a reference
 #### Example - 
 ```js
-client.db.get('table', 'key')
+client.db.db.get('table', 'key')
 ```
 
 ### ALL
 #### Description - Returns all values of the reference
 #### Example - 
 ```js
-client.db.all('table').then(a => a.map(b => b.key))
+client.db.db.all('table').then(a => a.map(b => b.key))
 ```
 ### DEL
 #### Description - To delete all the values made in the reference, be it the whole table, or a directory further down
 #### Example - 
 ```js
-client.db.del('table') or client.db.del('table', 'key')
-```
-
-## Others
-### PING
-#### Description  - Returning to Database Latency
-#### Example - 
-```js
-client.db.ping()
+client.db.db.del('table') or client.db.db.del('table', 'key')
 ```
 
 ## Aoi.FB

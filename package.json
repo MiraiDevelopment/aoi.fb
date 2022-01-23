@@ -1,16 +1,18 @@
 {
   "name": "aoi.fb",
-  "version": "3.0.0-aoiv5",
+  "version": "3.0.0",
   "description": "A Firebase database of wrapper using aoi.db as API",
   "main": "src/index.js",
   "dependencies": {
-    "aoi.js": "^5.0.8",
+    "aoi.js": "^5.1.0",
     "axios": "^0.25.0",
-    "dbdjs.mongo": "^1.0.1",
     "firebase": "8.0.0"
   },
   "devDependencies": {
-    "node": "^16.6.1"
+    "node": "^16.6.0"
+  },
+  "engines": {
+    "node": "^16.6.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
