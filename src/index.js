@@ -15,7 +15,7 @@ async function checkVersion() {
         console.warn(
           "\x1b[31maoi.fb warning: \u001b[33mv" +
           res.data.version +
-          " is available to install.\u001b[0m",
+          " is available to install.\u001b[0m - however, requires aoi.js 5.0.0 or higher",
         )
 
       }
