@@ -65,7 +65,8 @@ class AoiFB {
           set: set,
           get: get,
           all: all,
-          del: deleteData
+          del: deleteData,
+          delete: deleteData
         };
       
       } catch(e) { throw new Error(e) }
