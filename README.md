@@ -5,7 +5,7 @@
 
 # aoi.fb
 
-A Firebase database of wrapper using aoi.db as API
+A Firebase database of wrapper using aoi.fb as API
 
 
 ## Table Of Contents
@@ -24,7 +24,7 @@ A Firebase database of wrapper using aoi.db as API
 - [Open Source](#open-source)
 
 ## About
-A Firebase database of wrapper using aoi.db as API
+A Firebase database of wrapper using aoi.fb as API
 [![NPM Version](https://img.shields.io/npm/v/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
 [![NPM Downloads](https://img.shields.io/npm/dt/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
 ## Installation
@@ -40,7 +40,7 @@ npm install aoi.fb@latest
 ```js
 const aoifb = require("aoi.fb")
 
-const database = aoifb.create({
+const firebase = aoifb.create({
   apiKey: "",
   authDomain: "",
   databaseURL: "",
@@ -118,7 +118,7 @@ client.db.db.ping()
 
 ## Aoi.FB
 
-aoi.fb, a Firebase database of wrapper using aoi.db as API
+aoi.fb, a Firebase database of wrapper using aoi.fb as API
 
 Owned by [GR](https://github.com/guihrib/) </br>
 

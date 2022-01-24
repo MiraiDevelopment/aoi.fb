@@ -56,23 +56,26 @@ class AoiFB {
   
   async create(object) {
       try {
-          const app = initializeApp(object);
-          adjust;
-          
-          console.log('[ Aoi.fb ] - Firebase initialized!');
-          
-          checkVersion();
-          
-          return {
-              version,
-              ping,
-              docs,
-              set,
-              get,
-              all,
-              del: deleteData
-          }
-      }
+      
+        const app = initializeApp(object);
+        adjust
+
+        console.log('[ Aoi.fb ] - Firebase initialized!')
+        checkVersion()
+
+        return {
+          version: version,
+          ping: ping,
+          docs: docs,
+          set: set,
+          get: get,
+          all: all,
+          del: deleteData,
+          delete: deleteData
+        };
+      
+      } catch(e) { throw new Error(e) }
+    }
   }
  
 }
