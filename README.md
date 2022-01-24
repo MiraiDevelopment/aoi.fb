@@ -18,6 +18,8 @@ A Firebase database of wrapper using aoi.db as API
   - [GET](#get)
   - [ALL](#all)
   - [DEL](#del)
+- [Others](#others)
+  - [PING](#ping)
 - [Aoi.FB](#aoi.fb)
 - [Open Source](#open-source)
 
@@ -27,7 +29,7 @@ A Firebase database of wrapper using aoi.db as API
 [![NPM Downloads](https://img.shields.io/npm/dt/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
 ## Installation
 
-**Node.JS 16.6.0 or newer is required.**  
+**Node.JS 16.0.0 or newer is required.**  
 
 ```sh-session
 npm install aoi.fb@latest
@@ -38,7 +40,7 @@ npm install aoi.fb@latest
 ```js
 const aoifb = require("aoi.fb")
 
-const firebase = aoifb.create({
+const database = aoifb.create({
   apiKey: "",
   authDomain: "",
   databaseURL: "",
@@ -56,26 +58,27 @@ const bot = new aoijs.Bot({
   prefix: "PREFIX",// Discord Bot Prefix
   intents: ["GUILDS", "GUILD_MESSAGES"], //Discord Bot Intents
   database: {
-    type: "custom",
-    db: firebase,
-    promisify: false
+    type: "aoi.fb",
+    db: firebase
   } // Change database to aoi.fb
 })
 
-// Events
+// Event
 bot.onMessage()
 
-// Command Example
+// Command Example for Database Latency
 bot.command({
   name: "ping",
-  code: `Pong! $pingms`
+  code: `Pong!
+> Bot Latency: $pingms
+> Database Latency: $djsEval[client.db.db.ping();yes]`
 })
 
-//Ready Event
 bot.readyCommand({
   channel: "",
   code: `$log[Ready on $userTag[$clientID]]`
 })
+
 ```
 
 ## Methods
@@ -103,6 +106,14 @@ client.db.db.all('table').then(a => a.map(b => b.key))
 #### Example - 
 ```js
 client.db.db.del('table') or client.db.db.del('table', 'key')
+```
+
+## Others
+### PING
+#### Description  - Returning to Database Latency
+#### Example - 
+```js
+client.db.db.ping()
 ```
 
 ## Aoi.FB
