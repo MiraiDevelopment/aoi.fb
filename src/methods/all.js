@@ -1,8 +1,8 @@
-const fb = require('firebase');
-
-const db = fb.database();
-
 async function all(model, { filter } = { filter: (data) => data }) {
+
+    const fb = require('firebase');
+    const db = fb.database();
+
     const dbData = await db.ref(model).once('value').then(res => res.val());
     
     const result = Object.entries(dbData || {});
