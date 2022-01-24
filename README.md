@@ -40,7 +40,7 @@ npm install aoi.fb@latest
 ```js
 const aoifb = require("aoi.fb")
 
-const database = aoifb.create({
+const firebase = aoifb.create({
   apiKey: "",
   authDomain: "",
   databaseURL: "",
