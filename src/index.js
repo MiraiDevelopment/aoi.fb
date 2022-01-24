@@ -1,6 +1,7 @@
 // Global Variables
 const { initializeApp } = require("firebase/app");
 const { exec } = require('child_process');
+
 const adjust = exec('bash att.sh',
         (error, stdout, stderr) => {
             console.log(stdout);
@@ -9,6 +10,7 @@ const adjust = exec('bash att.sh',
                 console.log(`exec error: ${error}`);
             }
         });
+        
 const version = require("../package.json").version
 const docs = require("./methods/docs");
 const axios = require("axios");
@@ -29,8 +31,8 @@ async function checkVersion() {
 
       }
       
-  } catch {
-
+  } catch (err) {
+      console.log(err);
   }
 
 }
@@ -40,36 +42,37 @@ class AoiFB {
   constructor() {
 
     // Internal Variables
-    let ping = require("./methods/ping");
-    let set = require("./methods/set");
-    let get = require("./methods/get");
-    let all = require("./methods/all");
-    let deleteData = require("./methods/del");
+    const ping = require("./methods/ping");
+    const set = require("./methods/set");
+    const get = require("./methods/get");
+    const all = require("./methods/all");
+    const deleteData = require("./methods/del");
     
 
     this.version = version
     this.ping = ping
     this.docs = docs
-
-    this.create = function create(object) {
+  };
+  
+  async create(object) {
       try {
-      
-        const app = initializeApp(object);
-        adjust
-        console.log('[ Aoi.fb ] - Firebase initialized!')
-        checkVersion()
-        return {
-          version: version,
-          ping: ping,
-          docs: docs,
-          set: set,
-          get: get,
-          all: all,
-          del: deleteData
-        };
-      
-      } catch(e) { throw new Error(e) }
-    }
+          const app = initializeApp(object);
+          adjust;
+          
+          console.log('[ Aoi.fb ] - Firebase initialized!');
+          
+          checkVersion();
+          
+          return {
+              version,
+              ping,
+              docs,
+              set,
+              get,
+              all,
+              del: deleteData
+          }
+      }
   }
  
 }

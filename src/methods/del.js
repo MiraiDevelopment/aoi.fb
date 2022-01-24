@@ -1,9 +1,9 @@
 async function del(model, key, value) {
 
-    let fb = require("firebase")
-    let db = fb.database()
+    const fb = require("firebase");
+    const db = fb.database();
   
-    let result = db.ref(model+"/"+key).remove()
+    const result = db.ref(model+"/"+key).remove();
     
     return typeof result !== undefined;
   

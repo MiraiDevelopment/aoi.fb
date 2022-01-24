@@ -1,5 +1,6 @@
 const methods = require('../docs/methods.js')
 const others = require('../docs/others.js')
+
 class Docs {
     
     constructor() {
