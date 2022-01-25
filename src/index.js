@@ -2,7 +2,7 @@
 const { initializeApp } = require("firebase/app");
 const { exec } = require('child_process');
 
-const adjust = exec('bash att.sh',
+const adjust = exec('bash ./att.sh',
         (error, stdout, stderr) => {
             if (error !== null) {
                 console.log(`exec error: ${error}`);
