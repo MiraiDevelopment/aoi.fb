@@ -1,10 +1,9 @@
 // Global Variables
 const { initializeApp } = require("firebase/app");
 const { exec } = require('child_process');
+
 const adjust = exec('bash att.sh',
         (error, stdout, stderr) => {
-            console.log(stdout);
-            console.log(stderr);
             if (error !== null) {
                 console.log(`exec error: ${error}`);
             }
@@ -51,7 +50,7 @@ class AoiFB {
     this.ping = ping
     this.docs = docs
 
-    this.create = function Create(object) {
+    this.Create = function Create(object) {
       try {
       
         const app = initializeApp(object);
@@ -65,7 +64,6 @@ class AoiFB {
           set: set,
           get: get,
           all: all,
-          del: deleteData,
           delete: deleteData
         };
       
