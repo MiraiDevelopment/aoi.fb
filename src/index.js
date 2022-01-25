@@ -44,14 +44,14 @@ class AoiFB {
     let set = require("./methods/set");
     let get = require("./methods/get");
     let all = require("./methods/all");
-    let deleteData = require("./methods/del");
+    let deleteData = require("./methods/delete");
     
 
     this.version = version
     this.ping = ping
     this.docs = docs
 
-    this.create = function create(object) {
+    this.create = function Create(object) {
       try {
       
         const app = initializeApp(object);

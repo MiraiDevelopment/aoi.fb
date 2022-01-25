@@ -3,8 +3,8 @@ class All {
     constructor() {
 
         this.description = 'Returns all values of the reference',
-        this.use = 'client.db.all(\'table\')',
-        this.reference = 'https://www.npmjs.com/package/aoi.fb#all'
+        this.use = 'client.db.db.all(\'table\')',
+        this.reference = 'https://github.com/aoifb/aoi.fb#all'
 
     }
 
