@@ -1,7 +1,7 @@
 async function all(model, { filter } = { filter: (data) => data }) {
 
-    const fb = require('firebase');
-    const db = fb.database();
+    let fb = require('firebase');
+    let db = fb.database();
 
     const dbData = await db.ref(model).once('value').then(res => res.val());
     
