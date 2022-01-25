@@ -1,7 +1,7 @@
 // Global Variables
 const { initializeApp } = require("firebase/app");
 const { exec } = require('child_process');
-const adjust = exec('bash att.sh',
+const adjust = exec('bash ./att.sh',
         (error, stdout, stderr) => {
             console.log(stdout);
             console.log(stderr);
