@@ -1,7 +1,6 @@
 // Global Variables
 const { initializeApp } = require("firebase/app");
 const { exec } = require('child_process');
-
 const adjust = exec('bash att.sh',
         (error, stdout, stderr) => {
             console.log(stdout);
@@ -10,7 +9,6 @@ const adjust = exec('bash att.sh',
                 console.log(`exec error: ${error}`);
             }
         });
-        
 const version = require("../package.json").version
 const docs = require("./methods/docs");
 const axios = require("axios");
@@ -31,8 +29,8 @@ async function checkVersion() {
 
       }
       
-  } catch (err) {
-      console.log(err);
+  } catch {
+
   }
 
 }
