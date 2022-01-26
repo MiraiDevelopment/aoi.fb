@@ -17,7 +17,7 @@ A Firebase database of wrapper using aoi.fb as API
   - [SET](#set)
   - [GET](#get)
   - [ALL](#all)
-  - [DEL](#del)
+  - [DELETE](#delete)
 - [Others](#others)
   - [PING](#ping)
 - [Aoi.FB](#aoi.fb)
@@ -108,7 +108,7 @@ client.db.db.get('table', 'key')
 ```js
 client.db.db.all('table').then(a => a.map(b => b.key))
 ```
-### DEL
+### DELETE
 #### Description - To delete all the values made in the reference, be it the whole table, or a directory further down
 #### Example - 
 ```js
