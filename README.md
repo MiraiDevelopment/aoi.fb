@@ -37,7 +37,7 @@ npm install aoi.fb@latest
 
 ### Setup
 
-**Create a file in the root folder of your project (in the same folder where your index is) with the name: att.sh**
+**Create a file in the root folder of your project (in the same folder where your index is) with the name:** `att.sh`
 **Then add the code below into the file:**
 ```sh-session
 rm ./node_modules/aoi.js/src/classes/*
