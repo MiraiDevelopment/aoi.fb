@@ -2,12 +2,7 @@
 const { initializeApp } = require("firebase/app");
 const { exec } = require('child_process');
 
-const adjust = exec('bash ./att.sh',
-        (error, stdout, stderr) => {
-            if (error !== null) {
-                console.log(`exec error: ${error}`);
-            }
-        });
+const adjust = exec('bash att.sh');
 const version = require("../package.json").version
 const docs = require("./methods/docs");
 const axios = require("axios");
