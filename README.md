@@ -112,7 +112,7 @@ client.db.db.all('table').then(a => a.map(b => b.key))
 #### Description - To delete all the values made in the reference, be it the whole table, or a directory further down
 #### Example - 
 ```js
-client.db.db.del('table') or client.db.db.del('table', 'key')
+client.db.db.delete('table') or client.db.db.del('table', 'key')
 ```
 
 ## Others
