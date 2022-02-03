@@ -174,8 +174,8 @@ client.db.db.ping() // Requesting the database latency
 
 aoi.fb, a Firebase database of wrapper using aoi.fb as API
 
-Owned by [GR](https://github.com/guihrib/) </br>
-Developer [Luís Fernando](https://github.com/KrulDev)<br>
+Owned by [GR](https://github.com/guihrib/) `GR#3012`</br>
+Developer [Luís Fernando](https://github.com/KrulDev) `Luís Fernando#1581`<br>
 
 ## Open Source
 
