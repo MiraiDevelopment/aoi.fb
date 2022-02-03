@@ -7,9 +7,9 @@ async function get(model, key, value) {
         result = result.val()
     
    return result
-      ? {
-          key: key,
-          value: result,
+      ? { 
+        key: key,
+        value: result
         }
       : undefined;
   

@@ -13,16 +13,24 @@ A Firebase database of wrapper using aoi.fb as API
 - [About](#about)
 - [Installation](#installation)
   - [Setup](#setup)
-- [Methods](#methods)
+- [Methods Examples](#methods-examples)
   - [SET](#set)
   - [GET](#get)
   - [ALL](#all)
   - [DELETE](#delete)
-- [Others](#others)
+- [Others Examples](#others)
   - [PING](#ping)
-- [Aoi.FB](#aoi.fb)
+  - [PackageJson](#packagejson)
+- [AoiFB](#aoifb)
 - [Open Source](#open-source)
 
+|         |   Documentation and tiny information                                                               |                                                        |
+|:-------:|:--------------------------------------------------------------------------------------------------|--------------------------------------------------------: |
+| Methods |                                            Description                                           |                           Use                          |
+|   SET   |                                To set a value to a referenced key                                |        client.db.db.set('table', 'key', 'value')       |
+|   GET   |                                  To get the value of a table                                     | client.db.db.get('table', 'key').then(a => a.value)    |
+|   ALL   |                                Returns all values of the reference                               | client.db.db.all('table').then(a => a.map(b => b.key)) |
+|  DELETE | To delete all the values made in the reference, be it the whole table, ora directory further down|           client.db.db.delete('table', 'key')          |
 ## About
 A Firebase database of wrapper using aoi.fb as API
 [![NPM Version](https://img.shields.io/npm/v/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
@@ -88,46 +96,86 @@ bot.readyCommand({
 
 ```
 
-## Methods
+## Methods Examples
+
+```fix
+(Table)
+main--
+    money--
+          key: money
+          value: 1000
+    prefix--
+          key: prefix
+          value: fb.
+```
+
 ### SET
-#### Description - To set a value to a referenced key
 #### Example - 
 ```js
-client.db.db.set('table', 'key', 'value')
+client.db.db.set('main', 'money', '1000') // Setting the value '1000' in the 'money' key that is in the 'main' table
+// return: bolean (true)
 ```
 ### GET
-#### Description - To get the value of a reference
 #### Example - 
 ```js
-client.db.db.get('table', 'key')
+client.db.db.get('main', 'money').then(a => a.value) // Asking for the value of the 'money' key
+// return: '1000' 
 ```
 
 ### ALL
-#### Description - Returns all values of the reference
 #### Example - 
 ```js
-client.db.db.all('table').then(a => a.map(b => b.key))
+client.db.db.all('main').then(a => a.map(b => b.key)) // Requesting all keys and values within each of your 'main' tables
+// return:  [ 'money', 'prefix' ] 
+client.db.db.all('main').then(a => a.map(b => b.data.value)) // Requesting all values from your 'main' table
+/* return: {
+  money: '1000',
+  prefix: 'fb.'
+} */
 ```
 ### DELETE
-#### Description - To delete all the values made in the reference, be it the whole table, or a directory further down
 #### Example - 
 ```js
-client.db.db.delete('table') or client.db.db.del('table', 'key')
+client.db.db.delete('table') // Deleting your entire (main) database table
+// return: bolean (true)
+client.db.db.delete('main', 'money') // Deleting the 'money' key and the value inside
+// return: bolean (true)
 ```
 
 ## Others
 ### PING
-#### Description  - Returning to Database Latency
 #### Example - 
 ```js
-client.db.db.ping()
+client.db.db.ping() // Requesting the database latency
+//return RandomNumberFromLatencyms
 ```
 
-## Aoi.FB
+ ## PackageJson
+**Your package.json should have a start script starting the node . that will start and run not only your index, but also the file nn att.sh**
+
+ ```json
+{
+  "name": "YourBotName",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "engines": {
+    "node": "^16.6.0"
+  },
+  "dependencies": {
+    "aoi.fb": "5.0.9",
+    "aoi.js": "5.0.8"
+  }
+}
+```
+
+## AoiFB
 
 aoi.fb, a Firebase database of wrapper using aoi.fb as API
 
 Owned by [GR](https://github.com/guihrib/) </br>
+Developer [Luís Fernando](https://github.com/KrulDev)<br>
 
 ## Open Source
 

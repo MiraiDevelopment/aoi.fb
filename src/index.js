@@ -52,7 +52,6 @@ class AoiFB {
         adjust
         console.log('[ Aoi.fb ] - Firebase initialized!')
         checkVersion()
-        console.log('[ Aoi.js ] - Commands loaded!')
         return {
           version: version,
           ping: ping,
