@@ -164,7 +164,7 @@ client.db.db.ping() // Requesting the database latency
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "5.0.9",
+    "aoi.fb": "5.1.1",
     "aoi.js": "5.0.8"
   }
 }
