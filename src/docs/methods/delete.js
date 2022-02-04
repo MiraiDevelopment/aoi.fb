@@ -1,4 +1,4 @@
-class Del {
+class Delete {
 
     constructor() {
 
@@ -10,4 +10,4 @@ class Del {
 
 }
 
-module.exports = new Del
+module.exports = new Delete

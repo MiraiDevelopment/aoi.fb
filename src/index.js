@@ -52,6 +52,7 @@ class AoiFB {
         adjust
         console.log('[ Aoi.fb ] - Firebase initialized!')
         checkVersion()
+        console.log('[ Aoi.fb - Support ] - Official Discord Server: https://discord.gg/GhUZQKRAAf')
         return {
           version: version,
           ping: ping,
@@ -61,7 +62,6 @@ class AoiFB {
           all: all,
           delete: deleteData
         };
-      
       } catch(e) { throw new Error(e) }
     }
   }
