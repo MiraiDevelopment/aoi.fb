@@ -78,8 +78,15 @@ const bot = new aoijs.Bot({
   } // Change database to aoi.fb
 })
 
+// LoadCommands
+const loader = new Aoijs.LoadCommands(bot);
+loader.load(bot.cmd, './Commands/', false)
+
 // Event
-bot.onMessage()
+bot.onMessage();
+bot.onMessageUpdate();
+bot.onMessageDelete();
+bot.onInteractionCreate();
 
 // Command Example for Database Latency
 bot.command({
@@ -167,7 +174,7 @@ client.db.db.ping() // Requesting the database latency
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.1.2",
+    "aoi.fb": "^5.1.3",
     "aoi.js": "^5.0.8"
   }
 }
@@ -177,7 +184,7 @@ client.db.db.ping() // Requesting the database latency
 
 aoi.fb, a Firebase database of wrapper using aoi.fb as API
 
-Owned by [GR](https://github.com/guihrib/) `GR#3012`</br>
+Owned by [GR](https://github.com/guihrib/) `GR#3012`<br>
 Developer [Luís Fernando](https://github.com/KrulDev) `Luís Fernando#1581`<br>
 
 ## Open Source
