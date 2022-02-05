@@ -208,7 +208,7 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.2.4",
+    "aoi.fb": "^5.2.6",
     "aoi.js": "^5.0.8"
   }
 }
