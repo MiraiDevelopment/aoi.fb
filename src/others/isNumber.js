@@ -1,4 +1,4 @@
-async function get(model, key, value) {
+async function isNumber(model, key) {
 
     let fb = require("firebase")
     let db = fb.database()
@@ -6,13 +6,8 @@ async function get(model, key, value) {
     let result = await db.ref(model+"/"+key).once("value")
         result = result.val()
     
-   return result
-      ? { 
-        key: key,
-        value: result
-        }
-      : undefined;
+   return typeof result === "number" ? true : false;
   
-  }
+}
   
-  module.exports = get
+  module.exports = isNumber

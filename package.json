@@ -1,6 +1,6 @@
 {
     "name": "aoi.fb",
-    "version": "4.3.2-dev",
+    "version": "5.2.4",
     "description": "A Firebase database of wrapper using aoi.fb as API",
     "main": "src/index.js",
     "dependencies": {
@@ -9,7 +9,7 @@
       "firebase": "^8.0.0"
     },
     "devDependencies": {
-      "node": "^16.6.1"
+      "node": "^16.6.0"
     },
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
