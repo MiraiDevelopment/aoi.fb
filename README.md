@@ -20,17 +20,26 @@ A Firebase database of wrapper using aoi.fb as API
   - [DELETE](#delete)
 - [Others Examples](#others)
   - [PING](#ping)
+  - [ARGSCOUNT](#argscount)
+  - [ISSTRING](#isstring)
+  - [ISNUMBER](#isnumber)
   - [PackageJson](#packagejson)
 - [AoiFB](#aoifb)
 - [Open Source](#open-source)
 
-|         |   Documentation and tiny information                                                               |                                                        |
-|:-------:|:--------------------------------------------------------------------------------------------------|--------------------------------------------------------: |
-| Methods |                                            Description                                           |                           Use                          |
-|   SET   |                                To set a value to a referenced key                                |        client.db.db.set('table', 'key', 'value')       |
-|   GET   |                                  To get the value of a table                                     | client.db.db.get('table', 'key').then(a => a.value)    |
-|   ALL   |                                Returns all values of the reference                               | client.db.db.all('table').then(a => a.map(b => b.key)) |
-|  DELETE | To delete all the values made in the reference, be it the whole table, ora directory further down|           client.db.db.delete('table', 'key')          |
+|          |                                                         Documentation and tiny information       |                                                        |
+|:--------:|:------------------------------------------------------------------------------------------------:|:------------------------------------------------------:|
+| Methods  |                                            Description                                           |                           Use                          |
+|   SET    |                                To set a value to a referenced key                                |        client.db.db.set('table', 'key', 'value')       |
+|   GET    |                                  To get the value of a table                                     | client.db.db.get('table', 'key').then(a => a.value)    |
+|   ALL    |                                Returns all values of the reference                               | client.db.db.all('table').then(a => a.map(b => b.key)) |
+|  DELETE  | To delete all the values made in the reference, be it the whole table, ora directory further down|           client.db.db.delete('table', 'key')          |
+|          |                                                                                                  |                                                        |
+|  Others  |                                            Description                                           |                           Use                          |
+|   PING   |                                 Requesting the database latency                                  |                    client.db.db.ping()                 |
+| ARGSCOUNT|                        Counting arguments to the value of the requested key                      |         client.db.db.argsCount('table', 'key')         |
+| ISSTRING |                              Checking if the key value is a string                               |          client.db.db.isString('table', 'key')         |
+| ISNUMBER |                              Checking if the key value is a number                               |          client.db.db.isNumber('table', 'key')         |
 ## About
 A Firebase database of wrapper using aoi.fb as API
 [![NPM Version](https://img.shields.io/npm/v/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
@@ -79,10 +88,10 @@ const bot = new aoijs.Bot({
 })
 
 // LoadCommands
-const loader = new Aoijs.LoadCommands(bot);
+const loader = new aoijs.LoadCommands(bot);
 loader.load(bot.cmd, './Commands/', false)
 
-// Event
+// Events
 bot.onMessage();
 bot.onMessageUpdate();
 bot.onMessageDelete();
@@ -104,7 +113,7 @@ bot.readyCommand({
 ```
 
 ## Methods Examples
-
+### Database Illustration
 ```fix
 (Table)
 main--
@@ -154,7 +163,32 @@ client.db.db.delete('main', 'money') // Deleting the 'money' key and the value i
 #### Example - 
 ```js
 client.db.db.ping() // Requesting the database latency
-//return RandomNumberFromLatencyms
+// return: RandomNumberFromLatencyms
+```
+
+### ARGSCOUNT
+#### Example - 
+```js
+client.db.db.argsCount('main', 'money')
+// return: 4
+```
+
+### ISSTRING
+#### Example - 
+```js
+client.db.db.isString('main', 'money') // Checking if 'money' is a string
+// return: bolean (false)
+client.db.db.isString('main', 'prefix') // Checking if 'prefix' is a string
+// return: bolean (true)
+```
+
+### ISNUMBER
+#### Example - 
+```js
+client.db.db.isString('main', 'prefix') // Checking if 'prefix' is a number
+// return: bolean (false)
+client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
+// return: bolean (true)
 ```
 
  ## PackageJson
@@ -174,7 +208,7 @@ client.db.db.ping() // Requesting the database latency
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.1.3",
+    "aoi.fb": "^5.2.4",
     "aoi.js": "^5.0.8"
   }
 }

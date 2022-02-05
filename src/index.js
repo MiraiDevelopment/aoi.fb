@@ -4,7 +4,7 @@ const { exec } = require('child_process');
 
 const adjust = exec('bash att.sh');
 const version = require("../package.json").version
-const docs = require("./methods/docs");
+const docs = require("./others/docs");
 const axios = require("axios");
 
 async function checkVersion() {
@@ -34,11 +34,14 @@ class AoiFB {
   constructor() {
 
     // Internal Variables
-    let ping = require("./methods/ping");
     let set = require("./methods/set");
     let get = require("./methods/get");
     let all = require("./methods/all");
+    let ping = require("./others/ping");
     let deleteData = require("./methods/delete");
+    let argsCount = require("./others/argsCount");
+    let isString = require("./others/isString");
+    let isNumber = require("./others/isNumber");
     
 
     this.version = version
@@ -57,10 +60,14 @@ class AoiFB {
           version: version,
           ping: ping,
           docs: docs,
+          ready: true,
           set: set,
           get: get,
           all: all,
-          delete: deleteData
+          delete: deleteData,
+          argsCount: argsCount,
+          isString: isString,
+          isNumber: isNumber
         };
       } catch(e) { throw new Error(e) }
     }
