@@ -1,6 +1,6 @@
 {
     "name": "aoi.fb",
-    "version": "5.2.6",
+    "version": "5.2.7",
     "description": "A Firebase database of wrapper using aoi.fb as API",
     "main": "src/index.js",
     "dependencies": {
@@ -34,7 +34,13 @@
       "database"
     ],
     "author": "GR",
-    "license": "Apache-2.0 License",
+    "license": "Apache-2.0",
+    "licenses": [
+      {
+      "type": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+      }
+    ],
     "bugs": {
       "url": "https://github.com/aoifb/aoi.fb/issues"
     },

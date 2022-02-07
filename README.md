@@ -1,13 +1,14 @@
-<br />
-    <p>
-    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://cdn.discordapp.com/attachments/929747405916733460/934447223117340732/AoiFB_LogoTransparent_2.0.png" alt="aoi.fb" /></a>
-  </p>
+<br>
+<div align="center">
+    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://user-images.githubusercontent.com/61317250/152708623-0ba20c44-7b28-45b7-9181-a2d231b60395.png" alt="aoi.fb" /></a>
+    <h1>aoi.fb</h1>
+    <p>A Firebase database of wrapper using aoi.fb as API</p>
+</div>
+<br>
 
-# aoi.fb
-
-A Firebase database of wrapper using aoi.fb as API
-
-
+## Support - Have questions or want to talk and contact the developers?
+### Log on to the support server now to get answers to your questions or to receive help with errors:
+### [Official Server](https://discord.com/invite/GhUZQKRAAf)
 ## Table Of Contents
 
 - [About](#about)
@@ -24,6 +25,7 @@ A Firebase database of wrapper using aoi.fb as API
   - [ISSTRING](#isstring)
   - [ISNUMBER](#isnumber)
   - [PackageJson](#packagejson)
+- [Terms](#terms)
 - [AoiFB](#aoifb)
 - [Open Source](#open-source)
 
@@ -54,6 +56,7 @@ npm install aoi.fb@latest
 
 ### Setup
 
+**This file is mandatory and necessary for aoi.fb to work in aoi.jsV5! -- Why? Please look at the end of the [README](#terms)** 
 **Create a file in the root folder of your project (in the same folder where your index is) with the name:** `att.sh`
 **Then add the code below into the file:**
 ```sh-session
@@ -208,11 +211,17 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.2.6",
+    "aoi.fb": "^5.2.7",
     "aoi.js": "^5.0.8"
   }
 }
 ```
+
+## Terms
+
+What is the att.sh file in Aoi.fb version 5 used for?
+The att.sh file is for when the project is started, and the database is created, the file is also started and executed, and inside the file, modifications are made to aoi.js so that Aoi.fb works in V5 of Aoi.js, and the adjustments are pulled from the "adjust" folder of the Aoi.fb source code.
+**By creating this file and making use of aoi.fb you are aware that your version of aoi.jsV5 is being adapted or adjusted for the functionality of Aoi.fb .**
 
 ## AoiFB
 
