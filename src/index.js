@@ -52,7 +52,7 @@ class AoiFB {
         const app = initializeApp(object);
         console.log('[ Aoi.fb ] - Firebase initialized!')
         checkVersion()
-        console.log('[ Aoi.fb - Support ] - Official Discord Server: https://discord.gg/GhUZQKRAAf')
+        console.log('[ Aoi.fb - Support ] - Official Discord Server: https://discord.gg/gNFEMrHshn')
         return {
           version: version,
           ping: ping,

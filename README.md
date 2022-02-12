@@ -8,7 +8,7 @@
 
 ## Support - Have questions or want to talk and contact the developers?
 ### Log on to the support server now to get answers to your questions or to receive help with errors:
-### [Official Server](https://discord.com/invite/GhUZQKRAAf)
+### [Official Server](https://discord.gg/gNFEMrHshn)
 ## Table Of Contents
 
 - [About](#about)
@@ -25,7 +25,6 @@
   - [ISSTRING](#isstring)
   - [ISNUMBER](#isnumber)
   - [PackageJson](#packagejson)
-- [Terms](#terms)
 - [AoiFB](#aoifb)
 - [Open Source](#open-source)
 
@@ -190,7 +189,8 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
 ```
 
  ## PackageJson
-
+ 
+**Example of Replit**
  ```json
 {
   "name": "YourBotName",
@@ -205,24 +205,19 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.3.2",
+    "aoi.fb": "^5.3.3",
     "aoi.js": "AkaruiDevelopment/aoi.js"
   }
 }
 ```
 
-## Terms
-
-What is the att.sh file in Aoi.fb version 5 used for?
-The att.sh file is for when the project is started, and the database is created, the file is also started and executed, and inside the file, modifications are made to aoi.js so that Aoi.fb works in V5 of Aoi.js, and the adjustments are pulled from the "adjust" folder of the Aoi.fb source code.
-**By creating this file and making use of aoi.fb you are aware that your version of aoi.jsV5 is being adapted or adjusted for the functionality of Aoi.fb .**
 
 ## AoiFB
 
 aoi.fb, a Firebase database of wrapper using aoi.fb as API
 
-Owned by [GR](https://github.com/guihrib/) `GR#3012`<br>
-Developer [Luís Fernando](https://github.com/KrulDev) `Luís Fernando#1581`<br>
+Owned by [GR](https://github.com/guihrib/) - Discord: [GR#3012](https://discord.com/users/424931675009712128)<br>
+Developer [Luís Fernando](https://github.com/KrulDev) - Discord: [Luís Fernando#1581](https://discord.com/users/417067105897414667)<br>
 
 ## Open Source
 
