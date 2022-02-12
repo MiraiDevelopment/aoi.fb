@@ -1,8 +1,6 @@
 // Global Variables
 const { initializeApp } = require("firebase/app");
-const { exec } = require('child_process');
 
-const adjust = exec('bash att.sh');
 const version = require("../package.json").version
 const docs = require("./others/docs");
 const axios = require("axios");
@@ -52,7 +50,6 @@ class AoiFB {
       try {
       
         const app = initializeApp(object);
-        adjust
         console.log('[ Aoi.fb ] - Firebase initialized!')
         checkVersion()
         console.log('[ Aoi.fb - Support ] - Official Discord Server: https://discord.gg/GhUZQKRAAf')

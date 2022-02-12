@@ -54,15 +54,10 @@ A Firebase database of wrapper using aoi.fb as API
 npm install aoi.fb@latest
 ```
 
+**Aoi.js v5.1.0-dev is required.** **Check Check how to use in [Package.json](#packagejson)**
+
 ### Setup
 
-**This file is mandatory and necessary for aoi.fb to work in aoi.jsV5! -- Why? Please look at the end of the [README](#terms)** 
-**Create a file in the root folder of your project (in the same folder where your index is) with the name:** `att.sh`
-**Then add the code below into the file:**
-```sh-session
-rm ./node_modules/aoi.js/src/classes/*
-cp ./node_modules/aoi.fb/src/adjust/* ./node_modules/aoi.js/src/classes/
-```
 **Then, in your index file, configure aoi.fb:**
 ```js
 const aoifb = require("aoi.fb")
@@ -195,7 +190,6 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
 ```
 
  ## PackageJson
-**Your package.json should have a start script starting the node . that will start and run not only your index, but also the file nn att.sh**
 
  ```json
 {
@@ -211,8 +205,8 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.2.8",
-    "aoi.js": "^5.0.8"
+    "aoi.fb": "^5.3.0",
+    "aoi.js": "AkaruiDevelopment/aoi.js"
   }
 }
 ```
