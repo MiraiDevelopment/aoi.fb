@@ -206,18 +206,22 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.3.6",
+    "aoi.fb": "^5.3.7",
     "aoi.js": "AkaruiDevelopment/aoi.js"
   }
 }
 ```
+<br>
 
+<div align="center">
+<h1>Mirai Development</h1>
+<h2>AoiFB</h2>
 
-## AoiFB
+<p>aoi.fb, a Firebase database of wrapper using aoi.fb as API</p>
 
-aoi.fb, a Firebase database of wrapper using aoi.fb as API
-
-Owned by [GR](https://github.com/guihrib/)
+Owned by <a href="https://github.com/guihrib/">GR</a> and Team <a href="https://github.com/MiraiDevelopment">Mirai Development</a></p>
+    <a href="https://discord.gg/gNFEMrHshn"><img src="https://user-images.githubusercontent.com/61317250/153769250-28b954c3-245c-4151-bf9a-d6b2a73fc826.png" alt="Mirai Development" /></a>
+</div>
 
 ## Open Source
 
