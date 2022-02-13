@@ -1,6 +1,6 @@
 <br>
 <div align="center">
-    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://user-images.githubusercontent.com/61317250/152708623-0ba20c44-7b28-45b7-9181-a2d231b60395.png" alt="aoi.fb icon" /></a>
+    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://user-images.githubusercontent.com/61317250/153767201-2cd43d14-387d-4db4-abe2-37a49371d156.png" alt="aoi.fb icon" /></a>
     <h1>aoi.fb</h1>
     <p>A Firebase database of wrapper using aoi.fb as API</p>
     <a href="https://discord.gg/gNFEMrHshn"><img src="https://img.shields.io/discord/786392360475951154?color=5865F2&logo=discord&logoColor=white" alt="discord server" /></a>
@@ -206,7 +206,7 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.3.4",
+    "aoi.fb": "^5.3.6",
     "aoi.js": "AkaruiDevelopment/aoi.js"
   }
 }
@@ -217,8 +217,7 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
 
 aoi.fb, a Firebase database of wrapper using aoi.fb as API
 
-Owned by [GR](https://github.com/guihrib/) - Discord: [GR#3012](https://discord.com/users/424931675009712128)<br>
-Developer [Luís Fernando](https://github.com/KrulDev) - Discord: [Luís Fernando#1581](https://discord.com/users/417067105897414667)<br>
+Owned by [GR](https://github.com/guihrib/)
 
 ## Open Source
 
