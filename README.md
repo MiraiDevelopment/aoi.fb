@@ -1,8 +1,11 @@
 <br>
 <div align="center">
-    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://user-images.githubusercontent.com/61317250/152708623-0ba20c44-7b28-45b7-9181-a2d231b60395.png" alt="aoi.fb" /></a>
+    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://user-images.githubusercontent.com/61317250/152708623-0ba20c44-7b28-45b7-9181-a2d231b60395.png" alt="aoi.fb icon" /></a>
     <h1>aoi.fb</h1>
     <p>A Firebase database of wrapper using aoi.fb as API</p>
+    <a href="https://discord.gg/gNFEMrHshn"><img src="https://img.shields.io/discord/786392360475951154?color=5865F2&logo=discord&logoColor=white" alt="discord server" /></a>
+    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://img.shields.io/npm/v/aoi.fb.svg?maxAge=3600" alt="npm version" /></a>
+    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://img.shields.io/npm/dt/aoi.fb.svg?maxAge=3600" alt="npm downlods" /></a>
 </div>
 <br>
 
@@ -43,8 +46,6 @@
 | ISNUMBER |                              Checking if the key value is a number                               |          client.db.db.isNumber('table', 'key')         |
 ## About
 A Firebase database of wrapper using aoi.fb as API
-[![NPM Version](https://img.shields.io/npm/v/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
-[![NPM Downloads](https://img.shields.io/npm/dt/aoi.fb.svg?maxAge=3600)](https://www.npmjs.com/package/aoi.fb)
 ## Installation
 
 **Node.JS 16.0.0 or newer is required.**  
@@ -205,7 +206,7 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.3.3",
+    "aoi.fb": "^5.3.4",
     "aoi.js": "AkaruiDevelopment/aoi.js"
   }
 }
