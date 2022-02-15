@@ -48,13 +48,13 @@
 A Firebase database of wrapper using aoi.fb as API
 ## Installation
 
-**Node.JS 16.0.0 or newer is required.**  
+**Node.JS 16.6.0 or newer is required.**  
 
 ```sh-session
-npm install aoi.fb@latest
+npm install aoi.fb
 ```
 
-**Aoi.js v5.1.0-dev is required.** **Check Check how to use in [Package.json](#packagejson)**
+**Aoi.js v5.1.0 is required.** **Check Check how to use in [Package.json](#packagejson)**
 
 ### Setup
 
@@ -206,8 +206,8 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.3.7",
-    "aoi.js": "AkaruiDevelopment/aoi.js"
+    "aoi.fb": "^5.4.0",
+    "aoi.js": "5.1.0"
   }
 }
 ```
@@ -217,7 +217,7 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
 <h1>Mirai Development</h1>
 <h2>AoiFB</h2>
 
-<p>aoi.fb, a Firebase database of wrapper using aoi.fb as API</p>
+<p>aoi.fb - a Firebase database of wrapper using aoi.fb as API</p>
 
 Owned by <a href="https://github.com/guihrib/">GR</a> and Team <a href="https://github.com/MiraiDevelopment">Mirai Development</a></p>
     <a href="https://discord.gg/gNFEMrHshn"><img src="https://user-images.githubusercontent.com/61317250/153769250-28b954c3-245c-4151-bf9a-d6b2a73fc826.png" alt="Mirai Development" /></a>
