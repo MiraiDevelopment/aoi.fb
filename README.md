@@ -127,7 +127,7 @@ main--
 #### Example - 
 ```js
 client.db.db.set('main', 'money', '1000') // Setting the value '1000' in the 'money' key that is in the 'main' table
-// return: bolean (true)
+// return: boolean (true)
 ```
 ### GET
 #### Example - 
@@ -151,9 +151,9 @@ client.db.db.all('main').then(a => a.map(b => b.data.value)) // Requesting all v
 #### Example - 
 ```js
 client.db.db.delete('table') // Deleting your entire (main) database table
-// return: bolean (true)
+// return: boolean (true)
 client.db.db.delete('main', 'money') // Deleting the 'money' key and the value inside
-// return: bolean (true)
+// return: boolean (true)
 ```
 
 ## Others
@@ -175,18 +175,18 @@ client.db.db.argsCount('main', 'money')
 #### Example - 
 ```js
 client.db.db.isString('main', 'money') // Checking if 'money' is a string
-// return: bolean (false)
+// return: boolean (false)
 client.db.db.isString('main', 'prefix') // Checking if 'prefix' is a string
-// return: bolean (true)
+// return: boolean (true)
 ```
 
 ### ISNUMBER
 #### Example - 
 ```js
 client.db.db.isString('main', 'prefix') // Checking if 'prefix' is a number
-// return: bolean (false)
+// return: boolean (false)
 client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
-// return: bolean (true)
+// return: boolean (true)
 ```
 
  ## PackageJson
@@ -206,7 +206,7 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "^5.4.0",
+    "aoi.fb": "5.4.5",
     "aoi.js": "5.1.0"
   }
 }
