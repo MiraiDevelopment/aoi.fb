@@ -16,7 +16,7 @@ async function checkVersion() {
         console.warn(
           "\x1b[31maoi.fb warning: \u001b[33mv" +
           res.data.version +
-          " is available to install.\u001b[0m - however, requires aoi.js 5.1.0-dev",
+          " is available to install.\u001b[0m - however, requires \x1b[33maoi.js 5.1.0",
         )
 
       }
@@ -50,9 +50,9 @@ class AoiFB {
       try {
       
         const app = initializeApp(object);
-        console.log(`・Mirai Development ||< v${version} > ||[ Aoi.fb ] - Firebase initialized!・`)
+        console.log(`\x1b[32m・\x1b[36mMirai Development\x1b[37m || \x1b[32m< \x1b[34mv${version}\x1b[32m > \x1b[37m|| \x1b[32m[ \x1b[36mAoi.fb \x1b[32m] - Firebase initialized!・`)
         checkVersion()
-        console.log('・ [ Mirai Development ] - Official Discord Server: https://discord.gg/gNFEMrHshn ・')
+        console.log('\x1b[32m・ [ \x1b[36mMirai Development \x1b[32m] - Official Discord Server:\x1b[37m https://discord.gg/gNFEMrHshn \x1b[32m・')
         return {
           version: version,
           ping: ping,

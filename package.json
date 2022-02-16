@@ -1,19 +1,25 @@
 {
     "name": "aoi.fb",
-    "version": "5.4.5",
-    "description": "A Firebase database of wrapper using aoi.fb as API",
+    "version": "5.4.6",
+    "description": "aoi.fb - A Firebase database of wrapper using aoi.fb as API",
     "main": "src/index.js",
+    "scripts": {
+      "start": "node test.js"
+    },
     "dependencies": {
       "aoi.js": "5.1.0",
       "axios": "^0.25.0",
-      "firebase": "^8.0.0"
+      "firebase": "8.0.0"
     },
     "devDependencies": {
-      "node": "^16.6.0"
+      "node": ">=16.6.0"
     },
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+    "engines": {
+      "node": ">=16.6.0"
     },
+    "files": [
+      "src"
+    ],
     "repository": {
       "type": "git",
       "url": "git+https://github.com/aoifb/aoi.fb.git"
@@ -22,6 +28,8 @@
       "aoi",
       "db",
       "dbd",
+      "bot designer for discord",
+      "bd-script",
       "aoijs",
       "aoi.js",
       "aoi.fb",
@@ -31,7 +39,10 @@
       "dbdjs",
       "dbd.js",
       "firebase",
-      "database"
+      "database",
+      "discord",
+      "discordbot",
+      "bot"
     ],
     "author": "GR",
     "license": "Apache-2.0",
