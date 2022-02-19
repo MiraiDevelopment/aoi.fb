@@ -1,6 +1,6 @@
 {
     "name": "aoi.fb",
-    "version": "5.4.6",
+    "version": "5.4.7",
     "description": "aoi.fb - A Firebase database of wrapper using aoi.fb as API",
     "main": "src/index.js",
     "scripts": {
@@ -22,7 +22,7 @@
     ],
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/aoifb/aoi.fb.git"
+      "url": "git+https://github.com/MiraiDevelopment/aoi.fb.git"
     },
     "keywords": [
       "aoi",
@@ -53,8 +53,8 @@
       }
     ],
     "bugs": {
-      "url": "https://github.com/aoifb/aoi.fb/issues"
+      "url": "https://github.com/MiraiDevelopment/aoi.fb/issues"
     },
-    "homepage": "https://github.com/aoifb/aoi.fb#readme"
+    "homepage": "https://github.com/MiraiDevelopment/aoi.fb#readme"
   }
   
