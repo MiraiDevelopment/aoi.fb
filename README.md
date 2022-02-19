@@ -226,3 +226,5 @@ Owned by <a href="https://github.com/guihrib/">GR</a> and Team <a href="https://
 ## Open Source
 
 aoi.fb is a package and db made for developers using aoi.js. Also made by you! If you want to contribute just do a [pull-request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+
+<p>Copyright © 2022 @Mirai Development</p>
