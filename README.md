@@ -41,7 +41,8 @@
 |   GET    |                                  To get the value of a table                                     | client.db.db.get('table', 'key').then(a => a.value)    |
 |   ALL    |                                Returns all values of the reference                               | client.db.db.all('table').then(a => a.map(b => b.key)) |
 |  DELETE  | To delete all the values made in the reference, be it the whole table, ora directory further down|           client.db.db.delete('table', 'key')          |
-|          |                                                                                                  |                                                        |
+|  UPDATE  |                                          Updates to value                                        |           client.db.db.delete('table', 'key')          |
+|          |                                                                                                  |    client.db.db.update('table', 'key', {value1: 'a'})  |
 |  Others  |                                            Description                                           |                           Use                          |
 |   PING   |                                 Requesting the database latency                                  |                    client.db.db.ping()                 |
 | ARGSCOUNT|                        Counting arguments to the value of the requested key                      |         client.db.db.argsCount('table', 'key')         |
@@ -118,6 +119,10 @@ bot.readyCommand({
 ```fix
 (Table)
 main--
+    values--
+          a: 1
+          b: 2
+          c: 3
     money--
           key: money
           value: 1000
@@ -153,9 +158,15 @@ client.db.db.all('main').then(a => a.map(b => b.data.value)) // Requesting all v
 ### DELETE
 #### Example - 
 ```js
-client.db.db.delete('table') // Deleting your entire (main) database table
+client.db.db.delete('main') // Deleting your entire (main) database table
 // return: boolean (true)
 client.db.db.delete('main', 'money') // Deleting the 'money' key and the value inside
+// return: boolean (true)
+```
+### UPDATE
+#### Example - 
+```js
+client.db.db.update('main', 'values', {a: '0'}) // Updates the value of the "a" key from 1 to zero without changing "b" and "c"
 // return: boolean (true)
 ```
 
@@ -209,7 +220,7 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "5.4.7",
+    "aoi.fb": "5.5.0",
     "aoi.js": "5.1.0"
   }
 }
