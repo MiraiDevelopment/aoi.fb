@@ -40,6 +40,7 @@ class AoiFB {
     let all = require("./methods/all");
     let ping = require("./others/ping");
     let deleteData = require("./methods/delete");
+    let update = require("./methods/update");
     let argsCount = require("./others/argsCount");
     let isString = require("./others/isString");
     let isNumber = require("./others/isNumber");
@@ -65,6 +66,7 @@ class AoiFB {
           get: get,
           all: all,
           delete: deleteData,
+          update: update,
           argsCount: argsCount,
           isString: isString,
           isNumber: isNumber
