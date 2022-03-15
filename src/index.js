@@ -77,29 +77,3 @@ class AoiFB {
 
 module.exports = new AoiFB
 // Copyright © 2022 @Mirai Development
-
-const aoifb = require("./src")
-
-const firebase = aoifb.Create({
-    apiKey: "AIzaSyBKkwtaAj861rNFVQJjQDYqWJv_4EX7g3o",
-    authDomain: "aoifb-example.firebaseapp.com",
-    databaseURL: "https://aoifb-example-default-rtdb.firebaseio.com",
-    projectId: "aoifb-example",
-    storageBucket: "aoifb-example.appspot.com",
-    messagingSenderId: "218421416101",
-    appId: "1:218421416101:web:d176bb0c7e46d5bf2d7d4c",
-    measurementId: "G-KCM0E09BHL"
-})
-
-const aoijs = require("aoi.js")
-
-const bot = new aoijs.Bot({
-    token: "OTQzMzIzODgyOTY5MDA2MTQw.YgxY0w.5QbHbfLVE1-Rvm9n0Wo2JdHZCkE", // Discord Bot Token
-    prefix: ",",// Discord Bot Prefix
-    intents: ["GUILDS", "GUILD_MESSAGES"], //Discord Bot Intents
-    database: {
-        type: "aoi.fb",
-        db: firebase
-    } // Change database to aoi.fb
-})
-
