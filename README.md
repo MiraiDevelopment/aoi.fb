@@ -25,6 +25,7 @@
   - [GET](#get)
   - [ALL](#all)
   - [DELETE](#delete)
+  - [UPDATE](#update)
 - [Others Examples](#others)
   - [PING](#ping)
   - [ARGSCOUNT](#argscount)
@@ -220,7 +221,7 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "5.5.0",
+    "aoi.fb": "5.5.5",
     "aoi.js": "5.1.0"
   }
 }
