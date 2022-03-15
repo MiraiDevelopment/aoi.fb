@@ -9,11 +9,13 @@ class Methods {
         let get = require("./methods/get");
         let all = require("./methods/all");
         let deleteData = require("./methods/delete");
+        let update = require("./methods/update");
 
         this.set = set,
         this.get = get,
         this.all = all
         this.delete = deleteData
+        this.update = update
 
     }
 
