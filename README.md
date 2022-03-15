@@ -11,7 +11,10 @@
 
 ## Support - Have questions or want to talk and contact the developers?
 ### Log on to the support server now to get answers to your questions or to receive help with errors:
-### [Official Server](https://discord.gg/gNFEMrHshn)
+<div align="center">
+  <h3><a href="https://discord.gg/gNFEMrHshn"alt="server support">Official Server</a></h3>
+</div>
+
 ## Table Of Contents
 
 - [About](#about)
