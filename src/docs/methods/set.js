@@ -6,7 +6,7 @@ class Set {
 
         this.description = 'To set a value to a referenced key',
         this.use = 'client.db.db.set(\'table\', \'key\', \'value\')',
-        this.examples = 'https://github.com/aoifb/aoi.fb#set'
+        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb#set'
 
     }
 

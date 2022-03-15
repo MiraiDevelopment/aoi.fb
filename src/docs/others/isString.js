@@ -6,7 +6,7 @@ class isString {
 
         this.description = 'Checking if the key value is a string',
         this.use = 'client.db.db.isString(\'table\', \'key\')',
-        this.examples = 'https://www.npmjs.com/package/aoi.fb#isstring'
+        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb#isstring'
 
     }
 
