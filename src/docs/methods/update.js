@@ -11,4 +11,5 @@ class Update {
     }
 
 }
+
 module.exports = new Update

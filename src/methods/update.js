@@ -10,4 +10,5 @@ async function update(model, key, value) {
     return typeof result !== undefined;
 
 }
+
 module.exports = update
