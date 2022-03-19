@@ -42,8 +42,8 @@
 |   GET    |                                  To get the value of a table                                     | client.db.db.get('table', 'key').then(a => a.value)    |
 |   ALL    |                                Returns all values of the reference                               | client.db.db.all('table').then(a => a.map(b => b.key)) |
 |  DELETE  | To delete all the values made in the reference, be it the whole table, ora directory further down|           client.db.db.delete('table', 'key')          |
-|  UPDATE  |                                          Updates to value                                        |           client.db.db.delete('table', 'key')          |
-|          |                                                                                                  |    client.db.db.update('table', 'key', {value1: 'a'})  |
+|  UPDATE  |                                          Updates to value                                        |    client.db.db.update('table', 'key', {value1: 'a'})  |
+|          |                                                                                                  |                                                        |
 |  Others  |                                            Description                                           |                           Use                          |
 |   PING   |                                 Requesting the database latency                                  |                    client.db.db.ping()                 |
 | ARGSCOUNT|                        Counting arguments to the value of the requested key                      |         client.db.db.argsCount('table', 'key')         |
