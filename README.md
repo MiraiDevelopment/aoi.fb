@@ -24,6 +24,7 @@
   - [SET](#set)
   - [GET](#get)
   - [ALL](#all)
+  - [PUSH](#push)
   - [DELETE](#delete)
   - [UPDATE](#update)
 - [Others Examples](#others)
@@ -41,8 +42,9 @@
 |   SET    |                                To set a value to a referenced key                                |        client.db.db.set('table', 'key', 'value')       |
 |   GET    |                                  To get the value of a table                                     | client.db.db.get('table', 'key').then(a => a.value)    |
 |   ALL    |                                Returns all values of the reference                               | client.db.db.all('table').then(a => a.map(b => b.key)) |
+|   PUSH    |                   To push a value from the reference and add it to the array                    | client.db.db.all('table').then(a => a.map(b => b.key)) |
 |  DELETE  | To delete all the values made in the reference, be it the whole table, ora directory further down|           client.db.db.delete('table', 'key')          |
-|  UPDATE  |                                          Updates to value                                        |    client.db.db.update('table', 'key', {value1: 'a'})  |
+|  UPDATE  |                                 Updates to value of the reference                                |        client.db.db.push('table', 'key', 'value')      |
 |          |                                                                                                  |                                                        |
 |  Others  |                                            Description                                           |                           Use                          |
 |   PING   |                                 Requesting the database latency                                  |                    client.db.db.ping()                 |
@@ -120,6 +122,9 @@ bot.readyCommand({
 ```fix
 (Table)
 main--
+    tasklist--
+          0: go shopping
+          1: back to home
     values--
           a: 1
           b: 2
@@ -156,6 +161,16 @@ client.db.db.all('main').then(a => a.map(b => b.data.value)) // Requesting all v
   prefix: 'fb.'
 } */
 ```
+
+### PUSH
+#### Example - 
+```js
+client.db.db.set('main', 'tasklist', ['go shopping']) // First value
+// return: boolean (true)
+client.db.db.push('main', 'tasklist', 'back to home') // New value pushed
+// return: boolean (true)
+```
+
 ### DELETE
 #### Example - 
 ```js
@@ -164,6 +179,7 @@ client.db.db.delete('main') // Deleting your entire (main) database table
 client.db.db.delete('main', 'money') // Deleting the 'money' key and the value inside
 // return: boolean (true)
 ```
+
 ### UPDATE
 #### Example - 
 ```js
