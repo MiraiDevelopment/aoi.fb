@@ -248,10 +248,11 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
 <h1>Mirai Development</h1>
 <h2>AoiFB</h2>
 
-<p>aoi.fb - a Firebase database of wrapper using aoi.fb as API</p>
+<p>aoi.fb - A Firebase database of wrapper using aoi.fb as API</p>
 
 Owned by <a href="https://github.com/guihrib/">GR</a> and Team <a href="https://github.com/MiraiDevelopment">Mirai Development</a></p>
-    <a href="https://discord.gg/gNFEMrHshn"><img src="https://user-images.githubusercontent.com/61317250/159102888-8af9ff2c-2c42-41d2-8178-b99d8d0d59ab.png" alt="Mirai Development" /></a>
+    <a href="https://discord.gg/gNFEMrHshn"><img src="https://user-images.githubusercontent.com/61317250/159178246-128e53fb-9b23-4fd4-b61f-94fe1784a48c.png" alt="Mirai Development" /></a>
+
 </div>
 
 ## Open Source
