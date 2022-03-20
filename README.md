@@ -42,9 +42,9 @@
 |   SET    |                                To set a value to a referenced key                                |        client.db.db.set('table', 'key', 'value')       |
 |   GET    |                                  To get the value of a table                                     | client.db.db.get('table', 'key').then(a => a.value)    |
 |   ALL    |                                Returns all values of the reference                               | client.db.db.all('table').then(a => a.map(b => b.key)) |
-|   PUSH    |                   To push a value from the reference and add it to the array                    | client.db.db.all('table').then(a => a.map(b => b.key)) |
+|   PUSH    |                   To push a value from the reference and add it to the array                    |        client.db.db.push('table', 'key', 'value')      |
 |  DELETE  | To delete all the values made in the reference, be it the whole table, ora directory further down|           client.db.db.delete('table', 'key')          |
-|  UPDATE  |                                 Updates to value of the reference                                |        client.db.db.push('table', 'key', 'value')      |
+|  UPDATE  |                                 Updates to value of the reference                                |   client.db.db.update('table', 'key', { value1: 'a'})  |
 |          |                                                                                                  |                                                        |
 |  Others  |                                            Description                                           |                           Use                          |
 |   PING   |                                 Requesting the database latency                                  |                    client.db.db.ping()                 |
@@ -237,8 +237,8 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "node": "^16.6.0"
   },
   "dependencies": {
-    "aoi.fb": "5.6.0",
-    "aoi.js": "5.1.0"
+    "aoi.fb": "5.6.5",
+    "aoi.js": "5.1.1"
   }
 }
 ```
