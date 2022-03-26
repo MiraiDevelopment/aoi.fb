@@ -4,8 +4,8 @@
     <h1>aoi.fb</h1>
     <p>A Firebase database of wrapper using aoi.fb as API</p>
     <a href="https://discord.gg/gNFEMrHshn"><img src="https://img.shields.io/discord/786392360475951154?style=for-the-badge&label=Chat&color=2490f8&logo=discord&logoColor=white" alt="discord server" /></a>
-    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://img.shields.io/npm/v/aoi.fb.svg?maxAge=3600&color=ec842c&logo=npm" alt="npm version" /></a>
-    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://img.shields.io/npm/dt/aoi.fb.svg?maxAge=3600&color=ec842c&logo=npm" alt="npm downlods" /></a>
+    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://img.shields.io/npm/v/aoi.fb.svg?style=for-the-badge&maxAge=3600&color=ec842c&logo=npm" alt="npm version" /></a>
+    <a href="https://www.npmjs.com/package/aoi.fb"><img src="https://img.shields.io/npm/dt/aoi.fb.svg?style=for-the-badge&maxAge=3600&color=ec842c&logo=npm" alt="npm downlods" /></a>
 </div>
 <br>
 
