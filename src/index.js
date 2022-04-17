@@ -19,7 +19,7 @@ async function checkVersion() {
         console.warn(
           "\x1b[31maoi.fb warning: \u001b[33mv" +
           res.data.version +
-          " is available to install.\u001b[0m - however, requires \x1b[33maoi.js 5.1.0",
+          " is available to install.\u001b[0m - however, requires \x1b[33maoi.js 5.1.0 or newer",
         )
 
       }
@@ -42,6 +42,7 @@ class AoiFB {
     let deleteData = require("./methods/delete");
     let push = require("./methods/push");
     let update = require("./methods/update");
+    let reset = require("./others/reset");
     let argsCount = require("./others/argsCount");
     let isString = require("./others/isString");
     let isNumber = require("./others/isNumber");
@@ -69,6 +70,7 @@ class AoiFB {
           push: push,
           delete: deleteData,
           update: update,
+          reset: reset,
           argsCount: argsCount,
           isString: isString,
           isNumber: isNumber

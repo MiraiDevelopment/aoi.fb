@@ -6,7 +6,7 @@ class Ping {
 
         this.description = 'Returning to Database Latency',
         this.use = 'client.db.db.ping()',
-        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb#ping'
+        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb/tree/docs#ping'
 
     }
 

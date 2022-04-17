@@ -6,7 +6,7 @@ class Update {
 
         this.description = 'Updates a value',
         this.use = 'client.db.db.update(\'table\', \'key\', { value1: \'a\'})',
-        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb#update'
+        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb/tree/docs#update'
 
     }
 

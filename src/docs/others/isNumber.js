@@ -6,7 +6,7 @@ class isNumber {
 
         this.description = 'Checking if the key value is a number',
         this.use = 'client.db.db.isNumber(\'table\', \'key\')',
-        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb#isnumber'
+        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb/tree/docs#isnumber'
 
     }
 

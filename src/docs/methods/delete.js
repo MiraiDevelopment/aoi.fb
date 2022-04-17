@@ -6,7 +6,7 @@ class Delete {
 
         this.description = 'To delete all the values made in the reference, be it the whole table, or a directory further down',
         this.use = 'client.db.db.delete(\'table\', \'key\')',
-        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb#delete'
+        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb/tree/docs#delete'
 
     }
 

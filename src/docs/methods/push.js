@@ -6,7 +6,7 @@ class Push {
 
         this.description = 'To push a value from the reference and add it to the array',
         this.use = 'client.db.db.push(\'table\', \'key\', \'value\')',
-        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb#push'
+        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb/tree/docs#push'
 
     }
 

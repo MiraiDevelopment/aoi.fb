@@ -6,7 +6,7 @@ class argsCount {
 
         this.description = 'Counting arguments to the value of the requested key',
         this.use = 'client.db.db.argsCount(\'table\', \'key\')',
-        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb#argscount'
+        this.examples = 'https://github.com/MiraiDevelopment/aoi.fb/tree/docs#argscount'
 
     }
 
