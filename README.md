@@ -14,6 +14,12 @@
 <div align="center">
   <h3><a href="https://discord.gg/gNFEMrHshn"alt="server support">Official Server</a></h3>
 </div>
+<br>
+<div align="center">
+    <a href="https://github.com/MiraiDevelopment/aoi.fb" alt="Return">
+        <img alt="Return" src="https://img.shields.io/static/v1?style=for-the-badge&maxAge=56600&label=Return&message=to%20Main&color=ec842c">
+    </a>
+</div>
 
 ## Summary
 - [Methods Examples](#methods-examples)
@@ -49,67 +55,6 @@
 | ARGSCOUNT|                        Counting arguments to the value of the requested key                      |         client.db.db.argsCount('table', 'key')         |
 | ISSTRING |                              Checking if the key value is a string                               |          client.db.db.isString('table', 'key')         |
 | ISNUMBER |                              Checking if the key value is a number                               |          client.db.db.isNumber('table', 'key')         |
-
-## Installation
-
-**Node.JS 16.6.0 or newer is required.**  
-
-```sh-session
-npm install aoi.fb
-```
-
-**Aoi.js v5.1.0 or newer is required.** **Check Check how to use in [Package.json](#packagejson)**
-
-### Setup
-
-**Then, in your index file, configure aoi.fb:**
-```js
-const aoifb = require("aoi.fb")
-const firebase = aoifb.Create({
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: ""
-})
-
-const aoijs = require("aoi.js")
-const bot = new aoijs.Bot({
-  token: "TOKEN", // Discord Bot Token
-  prefix: "PREFIX",// Discord Bot Prefix
-  intents: ["GUILDS", "GUILD_MESSAGES"], //Discord Bot Intents
-  database: {
-    type: "aoi.fb",
-    db: firebase
-  } // Change database to aoi.fb
-})
-
-// LoadCommands
-const loader = new aoijs.LoadCommands(bot);
-loader.load(bot.cmd, './Commands/', false)
-
-// Events
-bot.onMessage();
-bot.onMessageUpdate();
-bot.onMessageDelete();
-bot.onInteractionCreate();
-
-// Command Example for Database Latency
-bot.command({
-  name: "ping",
-  code: `Pong!
-> Bot Latency: $pingms
-> Database Latency: $djsEval[client.db.db.ping();yes]`
-})
-
-bot.readyCommand({
-  channel: "",
-  code: `$log[Ready on $userTag[$clientID]]`
-})
-```
 
 ## Methods Examples
 ### Database Illustration
@@ -242,7 +187,15 @@ client.db.db.isNumber('main', 'money') // Checking if 'money' is a number
     "aoi.js": "5.1.2"
   }
 }
+
 ```
+<br>
+<div align="center">
+    <a href="https://github.com/MiraiDevelopment/aoi.fb" alt="Return">
+        <img alt="Return" src="https://img.shields.io/static/v1?style=for-the-badge&maxAge=56600&label=Return&message=to%20Main&color=ec842c">
+    </a>
+</div>
+<br>
 <br>
 
 <div align="center">
