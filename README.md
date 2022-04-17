@@ -22,6 +22,7 @@
 - [Open Source](#open-source)
 
 <div align="center">
+    <h2>Documentation Access</h2>
     <a href="https://github.com/MiraiDevelopment/aoi.fb/tree/docs" alt="Documentation">
         <img alt="Documentation" src="https://img.shields.io/static/v1?style=for-the-badge&maxAge=56600&label=Documentation&message=Aoi.fb&color=ec842c">
     </a>
